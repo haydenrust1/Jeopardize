@@ -29,7 +29,8 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-require("./routes/")(app);
+require("./routes/questions-route")(app);
+require("./routes/users-route")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
