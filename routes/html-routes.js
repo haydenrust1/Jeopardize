@@ -1,6 +1,5 @@
-var path = require("path");
-
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+let isAuthenticated = require("../config/middleware/isAuthenticated");
+let db = require('../models');
 
 module.exports = function (app) {
 
@@ -19,7 +18,15 @@ module.exports = function (app) {
   });
 
   app.get("/signedin", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/signedin.html"));
+    res.redirect("/signedin");
   });
 
+  //Renders home screen for game
+  app.get("/index", function (req, res) {
+    res.json('index');
+  })
+
+  app.get("/questions", function (req, res) {
+    res.json('jeopardyBoard', db.Questions);
+  })
 };
