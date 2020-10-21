@@ -23,10 +23,11 @@ module.exports = function (app) {
 
   //Renders home screen for game
   app.get("/index", function (req, res) {
-    res.json('index');
+    res.render("index");
   })
 
+  //Renders game board
   app.get("/questions", function (req, res) {
-    res.json('jeopardyBoard', db.Questions);
+    res.render("jeopardyBoard", db.Questions);
   })
 };
