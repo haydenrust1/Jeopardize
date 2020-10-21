@@ -1,25 +1,32 @@
-var path = require("path");
+let isAuthenticated = require("../config/middleware/isAuthenticated");
+let db = require('../models');
 
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+module.exports = function (app) {
 
-module.exports = function(app) {
-
-  app.get("/", function(req, res) {
+  app.get("/", function (req, res) {
     if (req.user) {
       res.redirect("/signedin");
     }
     res.redirect("/login");
   });
 
-  app.get("/login", function(req, res) {
+  app.get("/login", function (req, res) {
     if (req.user) {
       res.redirect("/signedin");
     }
     res.redirect("/login");
   });
 
-  app.get("/signedin", isAuthenticated, function(req, res) {
+  app.get("/signedin", isAuthenticated, function (req, res) {
     res.redirect("/signedin");
   });
 
+  //Renders home screen for game
+  app.get("/index", function (req, res) {
+    res.json('index');
+  })
+
+  app.get("/questions", function (req, res) {
+    res.json('jeopardyBoard', db.Questions);
+  })
 };

@@ -1,11 +1,11 @@
 module.exports = function (sequelize, DataTypes) {
     //Defines table and columns
-    let Questions = sequelize.define('jeopardize_Q', {
+    let Questions = sequelize.define('jeopardize_q', {
         episodeNum: {
             type: DataTypes.STRING,
         },
         airDate: {
-            type: DataTypes.INT,
+            type: DataTypes.DATE,
         },
         roundType: {
             type: DataTypes.STRING,

@@ -22,7 +22,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 require("./routes/html-routes.js")(app);
-require("./routes/questions-route")
+require("./routes/questions-route")(app);
 require("./routes/users-route")(app);
 
 db.sequelize.sync({ force: true }).then(function () {
