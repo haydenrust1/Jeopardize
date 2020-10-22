@@ -23,7 +23,7 @@ module.exports = function (app) {
 
   //Renders home screen for game
   app.get("/index", function (req, res) {
-    res.render("jeopardyBoard");
+    res.render("index");
   })
 
   //Renders game board
