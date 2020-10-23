@@ -1,5 +1,4 @@
 let isAuthenticated = require("../config/middleware/isAuthenticated");
-let db = require('../models');
 
 module.exports = function (app) {
 
@@ -25,6 +24,6 @@ module.exports = function (app) {
 
   //Renders game board
   app.get("/questions", function (req, res) {
-    res.render("jeopardyBoard", db.Questions);
+    res.render("jeopardyBoard");
   })
 };

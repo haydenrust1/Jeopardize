@@ -1,16 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     //Defines table and columns
-    let Questions = sequelize.define('jeopardize_q', {
-        // episodeNum: {
-        //     type: DataTypes.STRING,
-        // },
-        // airDate: {
-        //     type: DataTypes.DATE,
-        // },
-        // roundType: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        // },
+    let Questions = sequelize.define('questions', {
         category: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -30,7 +20,8 @@ module.exports = function (sequelize, DataTypes) {
 
     },
         {
-            freezeTableName: true
+            freezeTableName: true,
+            timestamps: false
         });
 
     return Questions;
