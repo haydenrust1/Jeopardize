@@ -5,16 +5,13 @@ module.exports = function (app) {
 
   app.get("/", function (req, res) {
     if (req.user) {
-      res.redirect("/signedin");
+      return res.redirect("/signedin");
     }
-    res.redirect("/login");
+    return res.redirect("/login");
   });
 
   app.get("/login", function (req, res) {
-    if (req.user) {
-      res.redirect("/signedin");
-    }
-    res.redirect("/login");
+      res.render("login");
   });
 
   app.get("/signedin", isAuthenticated, function (req, res) {
