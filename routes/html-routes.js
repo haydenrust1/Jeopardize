@@ -4,7 +4,7 @@ module.exports = function (app) {
 
   app.get("/", function (req, res) {
     if (req.user) {
-      return res.redirect("/signedin");
+      return res.redirect("/index");
     }
     return res.redirect("/login");
   });
@@ -13,8 +13,12 @@ module.exports = function (app) {
       res.render("login");
   });
 
+  app.get("/registration", function (req, res) {
+    res.render("registration")
+  });
+
   app.get("/signedin", isAuthenticated, function (req, res) {
-    res.redirect("/signedin");
+    res.render("signedin");
   });
 
   //Renders home screen for game
