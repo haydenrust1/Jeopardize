@@ -4,20 +4,21 @@ module.exports = function (app) {
 
   app.get("/", function (req, res) {
     if (req.user) {
-      res.redirect("/signedin");
+      return res.redirect("/index");
     }
-    res.redirect("/login");
+    return res.redirect("/login");
   });
 
   app.get("/login", function (req, res) {
-    if (req.user) {
-      res.redirect("/signedin");
-    }
-    res.redirect("/login");
+      res.render("login");
+  });
+
+  app.get("/registration", function (req, res) {
+    res.render("registration")
   });
 
   app.get("/signedin", isAuthenticated, function (req, res) {
-    res.redirect("/signedin");
+    res.render("signedin");
   });
 
   //Renders home screen for game
