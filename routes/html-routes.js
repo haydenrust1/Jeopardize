@@ -18,7 +18,7 @@ module.exports = function (app) {
   });
 
   app.get("/signedin", isAuthenticated, function (req, res) {
-    res.render("signedin");
+    res.render("index");
   });
 
   app.get("/logout", function (req, res) {

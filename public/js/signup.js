@@ -24,7 +24,7 @@ $(document).ready(function() {
       password: password
     })
       .then(function() {
-        window.location.replace("/login");
+        window.location.replace("login");
       })
       .catch(handleLoginErr);
   }
