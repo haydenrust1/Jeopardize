@@ -1,20 +1,16 @@
 let isAuthenticated = require("../config/middleware/isAuthenticated");
-let db = require('../models');
+let db = require("../models");
 
 module.exports = function (app) {
-
   app.get("/", function (req, res) {
     if (req.user) {
-      res.redirect("/signedin");
+      return res.redirect("/signedin");
     }
-    res.redirect("/login");
+    return res.redirect("/login");
   });
 
   app.get("/login", function (req, res) {
-    if (req.user) {
-      res.redirect("/signedin");
-    }
-    res.redirect("/login");
+    res.render("login");
   });
 
   app.get("/signedin", isAuthenticated, function (req, res) {
@@ -23,10 +19,16 @@ module.exports = function (app) {
 
   //Renders home screen for game
   app.get("/index", function (req, res) {
-    res.json('index');
-  })
+    res.render("index");
+  });
 
+  //Renders game board
   app.get("/questions", function (req, res) {
-    res.json('jeopardyBoard', db.Questions);
-  })
+    db.questions.findAll().then(function (result) {
+      console.log(result);
+      res.render("jeopardyBoard", {
+        questions: result,
+      });
+    });
+  });
 };

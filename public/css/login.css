@@ -1,0 +1,64 @@
+body {
+    background-image: url('https://cdn.wallpapersafari.com/59/7/VZO9TD.jpg');
+    /* background-position: center;
+    background: no-repeat; */
+    background-size: 100%;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+}
+
+label{
+    color: white;
+    padding-top: 10px;
+    font-size: 24px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .btnclass{
+      text-align: center;
+  }
+
+  button {
+    color: black;
+    padding: 24px 35px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    /* width: 100%; */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  .jeopardizeimg {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+ 
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
