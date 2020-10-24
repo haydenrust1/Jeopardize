@@ -10,7 +10,7 @@ module.exports = function (app) {
   });
 
   app.get("/login", function (req, res) {
-      res.render("login");
+    res.render("login");
   });
 
   app.get("/registration", function (req, res) {
@@ -32,7 +32,7 @@ module.exports = function (app) {
   })
 
   //Renders game board
-  app.get("/questions", function (req, res) {
-    res.render("jeopardyBoard");
-  })
+  // app.get("/questions", function (req, res) {
+  //   res.render("jeopardyBoard");
+  // })
 };
