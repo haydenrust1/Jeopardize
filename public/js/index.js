@@ -12,4 +12,9 @@ $(document).ready(function () {
             console.log(data);
         })
     }
+    
+    $(".logout-btn").on("click", function(event) {
+        event.preventDefault();
+        window.location.replace("login");
+      });
 });
