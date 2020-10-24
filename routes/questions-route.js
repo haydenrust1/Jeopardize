@@ -1,17 +1,25 @@
 module.exports = function (app, db) {
 
     //retrieves questions by category for gameboard
-    app.get("/api/questions", function (req, res) {
-        db.jeopardize_q.findOne({
-            where: {
-                //TEST: should randomly select from categories column
-                category: "ROYAL FEMALE NICKNAMES"
-                // db.sequelize.random()
+    app.get("/questions", function (req, res) {
+        // let randomCategory = Math.floor(Math.random() * category.length);
+        db.jeopardize_q.findOne(
+            {
+                order: [
+                    //randomly selects column
+                    [db.sequelize.random()]
+                ],
+                where: {
+                    value: "$100"
+                }
             }
-        })
+        )
             .then(function (result) {
                 console.log(result);
-                res.json(result);
+                let handlebarsObj = {
+                    question: result
+                };
+                res.render("jeopardyBoard", handlebarsObj);
             });
     });
 
