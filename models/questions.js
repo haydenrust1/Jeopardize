@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     //Defines table and columns
-    let Questions = sequelize.define('questions', {
+    let Questions = sequelize.define('jeopardize_q', {
         category: {
             type: DataTypes.STRING,
             allowNull: false,
