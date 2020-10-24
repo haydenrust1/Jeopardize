@@ -21,6 +21,11 @@ module.exports = function (app) {
     res.render("signedin");
   });
 
+  app.get("/logout", function (req, res) {
+    req.logout();
+    res.redirect("/");
+  });
+
   //Renders home screen for game
   app.get("/index", function (req, res) {
     res.render("index");

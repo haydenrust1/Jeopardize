@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Will need to update with the correct form name and input id when gameboard is complete:
     var answerForm = $("form.answer");
     var answerInput = $("input#answer-input");
-    var questionId = $("#answer-input").attr("question-id")
+    var questionId = $("#answer-input").attr("question-id");
     var gameScore = 0
     var questionsRemaining = 30
   
@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
   
     function checkAnswer(userAnswer, questionsRemaining) {
-      $.get("/api/" + questionId, function (data) {
+      $.get("/api/questions/" + questionId, function (data) {
         console.log(data);
         correctAnswer = data.answer;
   
@@ -41,6 +41,11 @@ $(document).ready(function () {
         }
         renderJeopardyBoard();
     }
+
+    $(".logout-btn").on("click", function(event) {
+      event.preventDefault();
+      window.location.replace("login");
+    });
 
     // To do: need to add an end game proceedure and define our render board function to fill out the screen
   });      
