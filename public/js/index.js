@@ -9,10 +9,8 @@ $(document).ready(function () {
   //function that starts game!
   function start() {
     console.log('click!');
-    $.get('/api/questions', function (data) {
-      console.log(data);
-      window.location.replace("jeopardyBoard");
+    $.get('/questions', function (data) {
+      window.location = "/questions"
     })
   }
-
 });
