@@ -1,8 +1,8 @@
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 40%;
     padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
+    display: block;
+    margin: auto;
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
@@ -10,7 +10,8 @@ input[type=text], input[type=password] {
       text-align: center;
   }
   button {
-    color: black;
+    background-color: rgb(52, 52, 206) !important;
+    color: yellow !important;
     padding: 24px 35px;
     margin: 8px 0;
     border: none;
@@ -64,11 +65,14 @@ input[type=text], input[type=password] {
     transition: 0.3s;
     background-color: rgb(52, 52, 206);
     color: yellow;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    margin-bottom: 50px;
     float: none;
     padding: 25px;
     text-align: center;
-    opacity: 0.8;
+    /* opacity: 0.8; */
   }
   /* On mouse-over, add a deeper shadow */
   .card:hover {
@@ -89,9 +93,9 @@ input[type=text], input[type=password] {
       text-align: center;
       background-color: yellow;
   } */
-  button:hover {
+  /* button:hover {
     opacity: 0.8;
-  }
+  } */
 
   .cluePannel {
     background-color: blue;
