@@ -1,341 +1,208 @@
 <div class="container">
+    <div class="container">
     <div class="card" style="width: 41rem;">
         <img src="assets/logo.png" class="card-img-top" alt="logo">
-        {{!-- <div class="card-body"> --}}
-            {{!-- <h5 class="card-title">Train your brain to be a Jeopardy juggernaut!</h5> --}}
-            {{!-- <p class="card-text">Jeopardize is a Jeopardy participant study app, or daily knowledge enhancer. It comes with a complete database of all questions, that were actually used on the game show. Test yourself, or try on your friends.</p> --}}
-            {{!-- <button class="btn btn-light reset-btn">Reset</button>
-            - OR -
-            <button class="btn btn-light logout-btn">Log Out</button> --}}
-        {{!-- </div> --}}
     </div>
 </div>
-
-<div class="container">
-    <div id="categories" class="row">
-        <div class="col-sm-2">
-            ROYAL FEMALE NICKNAMES
-        </div>
-        <div class="col-sm-2">
-            TV ACTORS & ROLES
-        </div>
-        <div class="col-sm-2">
-            TRAVEL & TOURISM
-        </div>
-        <div class="col-sm-2">
-            I LADS
-        </div>
-        <div class="col-sm-2">
-            FOREWORDS
-        </div>
-        <div class="col-sm-2">
-            BACKWORDS
-        </div>
+    <div class="jumbotron">
     </div>
-    <div id="categories" class="row">
-        <div class="col-sm-2">
-            {{> question }}
+    <form class="answer">
+        <div class="form-group">
+            <input type="text" id="answer-input" name="user-answer">
         </div>
-        <div class="col-sm-2">
-            $100
-        </div>
-        <div class="col-sm-2">
-            $100
-        </div>
-        <div class="col-sm-2">
-            $100
-        </div>
-        <div class="col-sm-2">
-            $100
-        </div>
-        <div class="col-sm-2">
-            $100
-        </div>
-    </div>
-    <div id="categories" class="row">
-        <div class="col-sm-2">
-            $200
-        </div>
-        <div class="col-sm-2">
-            $200
-        </div>
-        <div class="col-sm-2">
-            $200
-        </div>
-        <div class="col-sm-2">
-            $200
-        </div>
-        <div class="col-sm-2">
-            $200
-        </div>
-        <div class="col-sm-2">
-            $200
-        </div>
-    </div>
-    <div id="categories" class="row">
-        <div class="col-sm-2">
-            $300
-        </div>
-        <div class="col-sm-2">
-            $300
-        </div>
-        <div class="col-sm-2">
-            $300
-        </div>
-        <div class="col-sm-2">
-            $300
-        </div>
-        <div class="col-sm-2">
-            $300
-        </div>
-        <div class="col-sm-2">
-            $300
-        </div>
-    </div>
-    <div id="categories" class="row">
-        <div class="col-sm-2">
-            $400
-        </div>
-        <div class="col-sm-2">
-            $400
-        </div>
-        <div class="col-sm-2">
-            $400
-        </div>
-        <div class="col-sm-2">
-            $400
-        </div>
-        <div class="col-sm-2">
-            $400
-        </div>
-        <div class="col-sm-2">
-            $400
-        </div>
-    </div>
-    <div id="categories" class="row">
-        <div class="col-sm-2">
-            $500
-        </div>
-        <div class="col-sm-2">
-            $500
-        </div>
-        <div class="col-sm-2">
-            $500
-        </div>
-        <div class="col-sm-2">
-            $500
-        </div>
-        <div class="col-sm-2">
-            $500
-        </div>
-        <div class="col-sm-2">
-            $500
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/js/jeopardyBoard.js"></script>
-
-    {{!-- <div class="jumbotron">
-        <!-- <h1>Jeopardize</h1> -->
-        <div class="jeopardizeimg">
-            <img src="assets/logo.png" class="logo">
-        </div>
-        <p>Train your brain for Jeopardy!</p>
-        <br>
-        <h2>Pick an Answer Below to Get Started</h2>
-    </div><!-- /jumbotron --> --}}
-{{!-- <div class="container">
+        <button type="submit">Submit</button>
+    </form>
     <div class="row" id="categories">
         <div class="card col-sm-2">
             <div class="card-body">
-                ROYAL FEMALE NICKNAMES
+                HISTORY
             </div>
         </div>
         <div class="card col-sm-2">
             <div class="card-body">
-                TV ACTORS & ROLES
+                ESPN's TOP 10 ALL-TIME ATHLETES
             </div>
         </div>
         <div class="card col-sm-2">
             <div class="card-body">
-                TRAVEL & TOURISM
+                Xs AND Os
             </div>
         </div>
         <div class="card col-sm-2">
             <div class="card-body">
-                I LADS
+                THE COMPANY LINE
             </div>
         </div>
         <div class="card col-sm-2">
             <div class="card-body">
-                FOREWORDS
+                3-LETTER WORDS
             </div>
         </div>
         <div class="card col-sm-2">
             <div class="card-body">
-                BACKWORDS
+                EPITAPHS AND TRIBUTES
             </div>
         </div>
     </div>
-    <div class="row" id="row1questions">
+    <div class="row twohundred" id="row1questions">
         <div class="card col-sm-2">
-            <div class="card-body">
-                $100
+            <div class="card-body" data="100" id="firstCat100">
+                100
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $100
+            <div class="card-body" data="100" id="secondCat100">
+                100
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $100
+            <div class="card-body" data="100" id="thirdCat100">
+                100
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $100
+            <div class="card-body" data="100" id="fourthCat100">
+                100
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $100
+            <div class="card-body" data="100" id="fifthCat100">
+                100
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $100
+            <div class="card-body" data="100" id="sixthCat100">
+                100
             </div>
         </div>
     </div>
     <div class="row" id="row2questions">
         <div class="card col-sm-2">
-            <div class="card-body">
-                $200
+            <div class="card-body" data="200" id="firstCat200">
+                200
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $200
+            <div class="card-body" data="200" id="secondCat200">
+                200
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $200
+            <div class="card-body" data="200" id="thirdCat200">
+                200
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $200
+            <div class="card-body" data="200" id="fourthCat200">
+                200
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $200
+            <div class="card-body" data="200" id="fifthCat200">
+                200
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $200
+            <div class="card-body" data="200" id="sixthCat200">
+                200
             </div>
         </div>
     </div>
     <div class="row" id="row3questions">
         <div class="card col-sm-2">
-            <div class="card-body">
-                $300
+            <div class="card-body" data="300" id="firstCat300">
+                300
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $300
+            <div class="card-body" data="300" id="secondCat300">
+                300
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $300
+            <div class="card-body" data="300" id="thirdCat300">
+                300
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $300
+            <div class="card-body" data="300" id="fourthCat300">
+                300
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $300
+            <div class="card-body" data="300" id="fifthCat300">
+                300
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $300
+            <div class="card-body" data="300" id="sixthCat300">
+                300
             </div>
         </div>
     </div>
     <div class="row" id="row4questions">
         <div class="card col-sm-2">
-            <div class="card-body">
-                $400
+            <div class="card-body" data="400" id="firstCat400">
+                400
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $400
+            <div class="card-body" data="400" id="secondCat400">
+                400
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $400
+            <div class="card-body" data="400" id="thirdCat400">
+                400
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $400
+            <div class="card-body" data="400" id="fourthCat400">
+                400
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $400
+            <div class="card-body" data="400" id="fifthCat400">
+                400
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $400
+            <div class="card-body" data="400" id="sixthCat400">
+                400
             </div>
         </div>
     </div>
     <div class="row" id="row5questions">
         <div class="card col-sm-2">
-            <div class="card-body">
-                $500
+            <div class="card-body" data="500" id="firstCat500">
+                500
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $500
+            <div class="card-body" data="500" id="secondCat500">
+                500
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $500
+            <div class="card-body" data="500" id="thirdCat500">
+                500
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $500
+            <div class="card-body" data="500" id="fourthCat500">
+                500
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $500
+            <div class="card-body" data="500" id="fifthCat500">
+                500
             </div>
         </div>
         <div class="card col-sm-2">
-            <div class="card-body">
-                $500
+            <div class="card-body" data="500" id="sixthCat500">
+                500
             </div>
         </div>
     </div>
-    <button class="logout-btn">Log Out</button> --}}
+    <button class="logout-btn">Log Out</button>
+    <script src="/js/jeopardyBoard.js"></script>
