@@ -1,14 +1,23 @@
-<h2>Create an Account</h2>
-<form class="createAcct">
-    <div class="form-group">
-        <label for="username-input">Username:</label>
-        <input type="text" id="username-input" name="username">
+{{!-- <div class="card" style="width: 41rem;">
+    <img src="assets/logo.png" class="card-img-top" alt="logo">
+    <div class="card-body">
+        <h5 class="card-title">Train your brain to be a Jeopardy juggernaut!</h5>
     </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password-input" placeholder="Password">
-    </div>
-    <button type="submit" class="btn btn-default">Sign Up</button>
-</form>
-
+</div> --}}
+<h1>Create an Account</h1>
+<div class="container">
+    <form class="createAcct">
+        <div class="form-group">
+            {{!-- <label for="username-input">Username:</label> --}}
+            <input type="text" id="username-input" name="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            {{!-- <label for="password">Password</label> --}}
+            <input type="password" id="password-input" placeholder="Password">
+        </div>
+        <div class="btnclass">
+            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+        </div>
+    </form>
+</div>
 <script type="text/javascript" src="/js/signup.js"></script>
