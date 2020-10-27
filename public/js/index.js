@@ -1,21 +1,7 @@
 $(document).ready(function () {
-    //JQuery Selectors
-    let playBtn = $(".play")
-
-    //Event Listeners
-    $(playBtn).on("click", start)
-
-    //Function that starts game
-    function start() {
-        console.log('click!');
-        $.get('/api/questions', function (data) {
-            console.log(data);
-        })
-    }
-
     $(".play-btn").on("click", function(event) {
         event.preventDefault();
-        window.location.replace("questions");
+        window.location.replace("jeopardyBoard");
       });
     
     $(".logout-btn").on("click", function(event) {
