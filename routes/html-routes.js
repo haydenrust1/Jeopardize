@@ -17,12 +17,8 @@ module.exports = function (app) {
     res.render("registration")
   });
 
-  app.get("/jeopardyBoard", function (req, res) {
-    res.render("jeopardyBoard");
-  });
-
-  app.get("/clue", function (req, res) {
-    res.render("clue");
+  app.get("/signedin", isAuthenticated, function (req, res) {
+    res.render("index");
   });
 
   app.get("/logout", function (req, res) {

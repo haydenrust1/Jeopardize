@@ -3,17 +3,23 @@ module.exports = function (app, db) {
     //retrieves questions by category for gameboard
     app.get("/questions", function (req, res) {
         // let randomCategory = Math.floor(Math.random() * category.length);
-        db.jeopardize_q.findAll(
+        db.jeopardize_q.findOne(
             {
                 order: [
                     //randomly selects column
                     [db.sequelize.random()]
-                ]
+                ],
+                where: {
+                    value: "$100"
+                }
             }
         )
             .then(function (result) {
-                let questionArr = result
-                res.json(questionArr);
+                console.log(result);
+                let handlebarsObj = {
+                    question: result
+                };
+                res.render("jeopardyBoard", handlebarsObj);
             });
     });
 

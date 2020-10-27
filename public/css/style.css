@@ -29,7 +29,7 @@ input[type=text], input[type=password] {
     padding-bottom: 20px;
   }
   .container {
-    padding: 40px;;
+    padding: 40px;
   }
   span.psw {
     float: right;
@@ -62,13 +62,13 @@ input[type=text], input[type=password] {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    background-color: rgb(52, 52, 206);
-    color: yellow;
     margin: 0 auto;
     float: none;
     padding: 25px;
-    text-align: center;
+    background-color: rgb(52, 52, 206);
+    color: yellow;
     opacity: 0.8;
+    text-align: center;
   }
   /* On mouse-over, add a deeper shadow */
   .card:hover {
@@ -93,14 +93,12 @@ input[type=text], input[type=password] {
     opacity: 0.8;
   }
 
-  .cluePannel {
-    background-color: blue;
-    color: white;
-  }
-
   .col-sm-2 {
     border: 3px solid black;
     background-color: rgb(52, 52, 206);
+    /* opacity: 0.8; */
+    height: 90px;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: yellow;
@@ -109,17 +107,21 @@ input[type=text], input[type=password] {
     font-size: larger;
   }
 
-  #col1-100 {
-    color: yellow;
-    font-weight: bold;
-    font-size: 200%;
-  }
-  
-  .modal-content {
-    color: black;
-    text-align: left;
-  }
-  
-  .hide {
-    display: none;
-  }
+#col1-100 {
+  color: yellow;
+  font-weight: bold;
+  font-size: 200%;
+}
+
+.modal-content {
+  color: black;
+  text-align: left;
+}
+
+.hide {
+  display: none;
+}
+
+#correct, #try-again {
+  text-align: center;
+}
