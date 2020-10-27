@@ -15,18 +15,19 @@ module.exports = function (app, db) {
             // }
         )
             .then(function (result) {
-                console.log(result);
-                // let val100 = [];
-                // let val200 = [];
-                // let val300 = [];
-                // let val400 = [];
-                // let val500 = [];
+                //create array of six category titles for ease in handlebars
+                let categoryData = []
+                for (let i = 0; i < 6; i++) {
+                    categoryData.push(result[i].category);
+                }
 
-                // for (let i = 0; i < result.length; i++) {
+                let dataObj = {
+                    questions: result,
+                    category: categoryData
+                };
+                // console.log(result[0].category);
 
-                // }
-                // console.log(data);
-                res.render('jeopardyBoard', result);
+                res.render('jeopardyBoard', dataObj);
             });
     });
 
