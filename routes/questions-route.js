@@ -1,19 +1,32 @@
 module.exports = function (app, db) {
 
-    //retrieves questions by category for gameboard
+    //retrieves ALL questions 
     app.get("/questions", function (req, res) {
         // let randomCategory = Math.floor(Math.random() * category.length);
-        db.jeopardize_q.findAll(
-            {
-                order: [
-                    //randomly selects column
-                    [db.sequelize.random()]
-                ]
-            }
+        db.jeopardize_q.findAll({
+            raw: true
+        }
+            /* FOR RANDOMIZING SELECTION*/
+            // {
+            //     order: [
+            //         //randomly selects column
+            //         [db.sequelize.random()]
+            //     ]
+            // }
         )
             .then(function (result) {
-                let questionArr = result
-                res.json(questionArr);
+                console.log(result);
+                // let val100 = [];
+                // let val200 = [];
+                // let val300 = [];
+                // let val400 = [];
+                // let val500 = [];
+
+                // for (let i = 0; i < result.length; i++) {
+
+                // }
+                // console.log(data);
+                res.render('jeopardyBoard', result);
             });
     });
 
