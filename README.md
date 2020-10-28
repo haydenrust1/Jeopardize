@@ -1,5 +1,7 @@
+## Group Project 2
 # Jeopardize - Train your brain for Jeopardy! 
-Group Project 2
+![Jeopardize Login](./screen-shot_1.png)
+![Jeopardize Login](./screen-shot_2.png)
 
 This is a full stack web application and the game is based on the famous game of Jeopard! We go the idea when one of our team members found a 
 JSON file with every question everasked on Jeopard. We couldn't resist the oppurtunity to make a web app game that the user could play at home. 
